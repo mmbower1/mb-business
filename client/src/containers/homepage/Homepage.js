@@ -5,7 +5,7 @@ import "./Homepage.scss";
 
 const Homepage = () => {
   return (
-    <div className="homepage">
+    <main id="homepage">
       <h1 className="lg-heading">
         MB <span className="text-secondary">Tutorials</span>
       </h1>
@@ -26,7 +26,7 @@ const Homepage = () => {
           <i className="fab fa-twitter fa-2x"></i>
         </a>
       </div>
-    </div>
+    </main>
   );
 };
 

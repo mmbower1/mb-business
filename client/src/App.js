@@ -8,7 +8,7 @@ import Homepage from "./containers/homepage/Homepage";
 import Header from "./components/header/Header";
 
 // styles
-import "./App.css";
+import "./App.scss";
 import "./scss/App.scss";
 
 // redux

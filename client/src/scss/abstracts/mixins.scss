@@ -1,0 +1,8 @@
+@mixin easeOut {
+  transition: all 0.2s ease-out;
+}
+
+@mixin background {
+  @if $show-home-image {
+  }
+}
