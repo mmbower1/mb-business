@@ -12,21 +12,9 @@ a {
   text-decoration: none;
 }
 
-body {
-  @include background;
-  background: $primary-color;
-  color: #fff;
-  height: 100%;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-}
-
 h1,
 h2,
 h3 {
-  margin: 0;
-  font-weight: 400;
-
   &.lg-heading {
     font-size: 6rem;
   }

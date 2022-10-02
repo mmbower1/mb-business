@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+@import "./scss/App.scss";
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  @include background;
+  background: $primary-color;
+  color: #fff;
+  height: 100%;
+  line-height: 1.5;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
 }
