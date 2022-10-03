@@ -1,7 +1,24 @@
 @import "../../scss/App.scss";
 
-.header {
+header {
   position: fixed;
   width: 100;
   z-index: 2;
+
+  .menu-btn {
+    @include easeOut;
+    cursor: pointer;
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    z-index: 3;
+
+    .btn-line {
+      @include easeOut;
+      background: #fff;
+      height: 3px;
+      margin: 0 0 5px 0;
+      width: 28px;
+    }
+  }
 }

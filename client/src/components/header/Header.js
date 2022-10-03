@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 
 const Header = () => {
+  const [openNav, setOpenNav] = useState(false);
+  const openNavClick = () => setOpenNav(true);
+
   return (
-    <div className="header">
-      <div classname="menu-btn">
+    <header className="header">
+      <div className="menu-btn" onClick={openNavClick}>
         <div className="btn-line"></div>
         <div className="btn-line"></div>
         <div className="btn-line"></div>
       </div>
-      <div className="menu">
+      <nav className="menu">
         <div className="menu-branding">
           <div className="portrait"></div>
         </div>
@@ -35,8 +38,8 @@ const Header = () => {
             </a>
           </li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 
