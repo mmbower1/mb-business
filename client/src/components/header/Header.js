@@ -9,6 +9,7 @@ const Header = () => {
   const menuNavEl = useRef(null);
   const menuBrandingEl = useRef(null);
   const navItemsEl = useRef(null);
+  console.log(navItemsEl);
 
   const toggleMenu = () => {
     if (!showMenu) {
@@ -17,8 +18,10 @@ const Header = () => {
       menuEl.current.classList.add("show");
       menuNavEl.current.classList.add("show");
       menuBrandingEl.current.classList.add("show");
-      // navItemsEl.map((item) => item.current.classList.add("show"));
-      navItemsEl.map((item) => createRef(item));
+      // [navItemsEl.current.children].forEach((item) =>
+      //   item.current.classList.add("show")
+      // );
+      // navItemsEl.map((item) => createRef(item));
 
       setShowMenu(true);
     } else {
@@ -27,8 +30,8 @@ const Header = () => {
       menuEl.current.classList.remove("show");
       menuNavEl.current.classList.remove("show");
       menuBrandingEl.current.classList.remove("show");
-      // navItemsEl.map((item) => item.current.classList.remove("show"));
-      navItemsEl.map((item) => createRef(item));
+      // navItemsEl.current.map((item) => item.current.classList.remove("show"));
+      // navItemsEl.map((item) => createRef(item));
 
       setShowMenu(false);
     }
@@ -46,7 +49,7 @@ const Header = () => {
           <div className="portrait"></div>
         </div>
         <ul className="menu-nav" ref={menuNavEl}>
-          <li className="nav-item" ref={navItemsEl}>
+          <li className="nav-item current" ref={navItemsEl}>
             <a href="" className="nav-link">
               Home
             </a>
