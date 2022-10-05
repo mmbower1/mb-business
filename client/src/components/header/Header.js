@@ -1,4 +1,5 @@
-import React, { useState, useRef, createRef } from "react";
+import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
@@ -10,6 +11,13 @@ const Header = () => {
   const menuBrandingEl = useRef(null);
   const navItemsEl = useRef(null);
   console.log(navItemsEl);
+
+  //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
+  const navItems1El = useRef(null);
+  const navItems2El = useRef(null);
+  const navItems3El = useRef(null);
+  const navItems4El = useRef(null);
+  //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
 
   const toggleMenu = () => {
     if (!showMenu) {
@@ -23,6 +31,13 @@ const Header = () => {
       // );
       // navItemsEl.map((item) => createRef(item));
 
+      //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
+      navItems1El.current.classList.add("show");
+      navItems2El.current.classList.add("show");
+      navItems3El.current.classList.add("show");
+      navItems4El.current.classList.add("show");
+      //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
+
       setShowMenu(true);
     } else {
       // remove classNames
@@ -32,6 +47,13 @@ const Header = () => {
       menuBrandingEl.current.classList.remove("show");
       // navItemsEl.current.map((item) => item.current.classList.remove("show"));
       // navItemsEl.map((item) => createRef(item));
+
+      //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
+      navItems1El.current.classList.remove("show");
+      navItems2El.current.classList.remove("show");
+      navItems3El.current.classList.remove("show");
+      navItems4El.current.classList.remove("show");
+      //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
 
       setShowMenu(false);
     }
@@ -49,25 +71,25 @@ const Header = () => {
           <div className="portrait"></div>
         </div>
         <ul className="menu-nav" ref={menuNavEl}>
-          <li className="nav-item current" ref={navItemsEl}>
-            <a href="" className="nav-link">
+          <li className="nav-item nav-item1 current" ref={navItems1El}>
+            <Link to="/" className="nav-link nav-link1">
               Home
-            </a>
+            </Link>
           </li>
-          <li className="nav-item" ref={navItemsEl}>
-            <a href="" className="nav-link">
+          <li className="nav-item nav-item2" ref={navItems2El}>
+            <Link to="/about" className="nav-link nav-link2">
               About Me
-            </a>
+            </Link>
           </li>
-          <li className="nav-item" ref={navItemsEl}>
-            <a href="" className="nav-link">
+          <li className="nav-item nav-item3" ref={navItems3El}>
+            <Link to="" className="nav-link nav-link3">
               My Work
-            </a>
+            </Link>
           </li>
-          <li className="nav-item" ref={navItemsEl}>
-            <a href="" className="nav-link">
+          <li className="nav-item nav-item4" ref={navItems4El}>
+            <Link to="" className="nav-link nav-link4">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

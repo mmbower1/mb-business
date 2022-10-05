@@ -13,6 +13,14 @@ header {
     top: 35px;
     z-index: 3;
 
+    .btn-line {
+      @include easeOut;
+      background: set-text-color($primary-color);
+      height: 3px;
+      margin: 0 0 5px 0;
+      width: 28px;
+    }
+
     // opens/closes nav menu
     &.close {
       transform: rotate(180deg);
@@ -31,14 +39,6 @@ header {
           transform: rotate(-45deg) translate(7px, -6px);
         }
       }
-    }
-
-    .btn-line {
-      @include easeOut;
-      background: #fff;
-      height: 3px;
-      margin: 0 0 5px 0;
-      width: 28px;
     }
   }
 }
@@ -115,7 +115,7 @@ header {
 
   .nav-link {
     @include easeOut;
-    color: #fff;
+    color: set-text-color($primary-color);
     display: inline-block;
     font-size: 30px;
     font-weight: 300;
