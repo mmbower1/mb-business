@@ -1,9 +1,16 @@
 import React from "react";
+import {} from "react";
 import "./Homepage.scss";
 
 // components
 
 const Homepage = () => {
+  // const [showMenu, setShowMenu] = useState(false);
+
+  // useEffect(() => {
+  //   setShowMenu(false);
+  // }, []);
+
   return (
     <main id="homepage">
       <h1 className="lg-heading">

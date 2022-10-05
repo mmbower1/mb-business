@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // containers
 import About from "./containers/about/About";
 import Homepage from "./containers/homepage/Homepage";
+import Work from "./containers/work/Work";
 
 // components
 import Header from "./components/header/Header";
@@ -31,6 +32,7 @@ function App() {
               <Header />
               <Route exact path="/" component={Homepage} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/work" component={Work} />
               <Footer />
             </div>
             {/* </Suspense> */}

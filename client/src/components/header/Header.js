@@ -82,7 +82,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="nav-item nav-item3" ref={navItems3El}>
-            <Link to="" className="nav-link nav-link3">
+            <Link to="/work" className="nav-link nav-link3">
               My Work
             </Link>
           </li>
