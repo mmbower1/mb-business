@@ -1,0 +1,27 @@
+@import "../../scss/App.scss";
+
+.boxes {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+
+  div {
+    @include easeOut;
+    border: 3px #fff solid;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem 2.5rem;
+
+    &:hover {
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      padding: 1rem 2rem;
+
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}

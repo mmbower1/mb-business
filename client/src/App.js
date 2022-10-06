@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // containers
 import About from "./containers/about/About";
 import Homepage from "./containers/homepage/Homepage";
+import Contact from "./containers/contact/Contact";
 import Work from "./containers/work/Work";
 
 // components
@@ -32,6 +33,7 @@ function App() {
               <Header />
               <Route exact path="/" component={Homepage} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/contact" component={Contact} />
               <Route exact path="/work" component={Work} />
               <Footer />
             </div>
