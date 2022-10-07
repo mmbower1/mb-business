@@ -29,10 +29,10 @@ const About = () => {
             <h3>ABC webshop</h3>
             <h6>Full Stack Developer</h6>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
               fugiat tempora voluptate earum totam harum placeat, soluta
               necessitatibus sint deleniti aut incidunt accusamus distinctio
-              fuga similique aliquam ullam nobis quas?
+              fuga similique aliquam ullam nobis quas? */}
             </p>
           </div>
           <div className="job job-2">

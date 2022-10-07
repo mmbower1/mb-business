@@ -1,9 +1,14 @@
 import React, { useState, useRef } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  // useEffect(() => {
+  //   setShowMenu(false);
+  // }, []);
 
   const menuBtnEl = useRef(null);
   const menuEl = useRef(null);
@@ -54,7 +59,6 @@ const Header = () => {
       navItems3El.current.classList.remove("show");
       navItems4El.current.classList.remove("show");
       //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
-
       setShowMenu(false);
     }
   };
