@@ -60,10 +60,10 @@ app.use(function (req, res, next) {
 });
 
 // access routes
-app.use("/login", require("./routes/homepage"));
-// app.use('/register', require('./routes/register'));
-// app.use('/profile', require('./routes/profile'));
-// app.use('/stripe', require('./routes/stripe'));
+app.use("/", require("./routes/homepage"));
+app.use("/login", require("./routes/login"));
+app.use("/register", require("./routes/register"));
+app.use("/profile", require("./routes/profile"));
 
 // heroku
 if (process.env.NODE_ENV === "production") {
