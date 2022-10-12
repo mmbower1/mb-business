@@ -6,7 +6,7 @@ const ProfileSchema = new mongoose.Schema({
     required: true,
     ref: "User",
   },
-  payemnt: {
+  payment: {
     type: String,
   },
   date: {

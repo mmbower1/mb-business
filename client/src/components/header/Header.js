@@ -1,10 +1,19 @@
 import React, { useState, useRef } from "react";
+
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+
+// npms
 import "./Header.scss";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log("submit handled");
+  };
+  // };
 
   // useEffect(() => {
   //   setShowMenu(false);
@@ -22,6 +31,7 @@ const Header = () => {
   const navItems2El = useRef(null);
   const navItems3El = useRef(null);
   const navItems4El = useRef(null);
+  const navItems5El = useRef(null);
   //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
 
   const toggleMenu = () => {
@@ -41,6 +51,7 @@ const Header = () => {
       navItems2El.current.classList.add("show");
       navItems3El.current.classList.add("show");
       navItems4El.current.classList.add("show");
+      navItems5El.current.classList.add("show");
       //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
 
       setShowMenu(true);
@@ -58,6 +69,8 @@ const Header = () => {
       navItems2El.current.classList.remove("show");
       navItems3El.current.classList.remove("show");
       navItems4El.current.classList.remove("show");
+      navItems5El.current.classList.remove("show");
+
       //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
       setShowMenu(false);
     }
@@ -93,6 +106,12 @@ const Header = () => {
           <li className="nav-item nav-item4" ref={navItems4El}>
             <Link to="/contact" className="nav-link nav-link4">
               Contact
+            </Link>
+          </li>
+          <br />
+          <li className="nav-item nav-item5" ref={navItems5El}>
+            <Link className="nav-link nav-link5" onSubmit={submitHandler}>
+              Login
             </Link>
           </li>
         </ul>
