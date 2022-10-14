@@ -6,8 +6,9 @@ import { Link } from "react-router-dom";
 // npms
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ history, location }) => {
   const [showMenu, setShowMenu] = useState(false);
+  // const redirect = location.search ? location.search.split("=")[1] : "/";
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -16,8 +17,8 @@ const Header = () => {
   // };
 
   // useEffect(() => {
-  //   setShowMenu(false);
-  // }, []);
+  //   console.log("useeffect");
+  // }, [history]);
 
   const menuBtnEl = useRef(null);
   const menuEl = useRef(null);
@@ -110,7 +111,11 @@ const Header = () => {
           </li>
           <br />
           <li className="nav-item nav-item5" ref={navItems5El}>
-            <Link className="nav-link nav-link5" onSubmit={submitHandler}>
+            <Link
+              to="/login"
+              className="nav-link nav-link5"
+              onSubmit={submitHandler}
+            >
               Login
             </Link>
           </li>

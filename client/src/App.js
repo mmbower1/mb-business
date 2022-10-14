@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // containers
 import About from "./containers/about/About";
-import Homepage from "./containers/homepage/Homepage";
 import Contact from "./containers/contact/Contact";
+import Homepage from "./containers/homepage/Homepage";
+import Login from "./containers/login/Login";
+import Register from "./containers/register/Register";
 import Work from "./containers/work/Work";
 
 // components
@@ -34,6 +36,8 @@ function App() {
               <Route exact path="/" component={Homepage} />
               <Route exact path="/about" component={About} />
               <Route exact path="/contact" component={Contact} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
               <Route exact path="/work" component={Work} />
               <Footer />
             </div>
