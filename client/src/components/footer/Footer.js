@@ -25,9 +25,15 @@ const Footer = () => {
               <a href="#">Twitter</a>
             </div>
           </div>
-          <div className="footer-col">
-            <h4>Technology</h4>
+          <div className="footer-col tech">
+            <h4>Tech</h4>
             <ul>
+              <li>
+                <a href="#">HTML/CSS</a>
+              </li>
+              <li>
+                <a href="#">Javascript</a>
+              </li>
               <li>
                 <a href="#">ReactJS</a>
               </li>
@@ -39,6 +45,9 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#">NodeJS</a>
+              </li>
+              <li>
+                <a href="#">AWS</a>
               </li>
             </ul>
           </div>
