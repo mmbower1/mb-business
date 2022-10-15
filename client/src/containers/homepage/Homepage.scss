@@ -30,10 +30,13 @@ main {
   padding: 4rem;
 
   .icons {
+    .expressjs {
+      font-size: 22px;
+    }
     margin-top: 1rem;
 
     a {
-      padding: 0.4rem;
+      padding: 1rem;
 
       &:hover {
         color: $secondary-color;

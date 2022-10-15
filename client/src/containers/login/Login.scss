@@ -2,12 +2,19 @@
 @import "../../scss/App.scss";
 
 .login {
-  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  background: linear-gradient(120deg, $primary-color 60%, $secondary-color);
   color: black;
   height: 100vh;
   margin: 0;
   padding: 0;
   overflow: hidden;
+
+  i {
+    color: #fff;
+    position: fixed;
+    top: 60px;
+    left: 60px;
+  }
 
   .form {
     background: #fff;

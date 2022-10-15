@@ -5,6 +5,9 @@ import "./Login.scss";
 const Login = () => {
   return (
     <div className="login">
+      <Link to="/">
+        <i className="fa fa-light fa-arrow-left fa-2x"></i>
+      </Link>
       <form className="form" method="post" action="">
         <h1>Login</h1>
         <div className="text-field">

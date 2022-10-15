@@ -10,15 +10,16 @@ const Header = ({ history, location }) => {
   const [showMenu, setShowMenu] = useState(false);
   // const redirect = location.search ? location.search.split("=")[1] : "/";
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    console.log("submit handled");
-  };
   // };
 
   // useEffect(() => {
   //   console.log("useeffect");
   // }, [history]);
+
+  // const onClick = (e) => {
+  //   e.preventDefault();
+  //   console.log("submit handled");
+  // };
 
   const menuBtnEl = useRef(null);
   const menuEl = useRef(null);
@@ -94,28 +95,24 @@ const Header = ({ history, location }) => {
               Home
             </Link>
           </li>
-          <li className="nav-item nav-item2" ref={navItems2El}>
-            <Link to="/about" className="nav-link nav-link2">
-              About Me
-            </Link>
-          </li>
-          <li className="nav-item nav-item3" ref={navItems3El}>
+          <li className="nav-item nav-item2" ref={navItems3El}>
             <Link to="/work" className="nav-link nav-link3">
-              My Work
+              Courses
             </Link>
           </li>
-          <li className="nav-item nav-item4" ref={navItems4El}>
+          <li className="nav-item nav-item3" ref={navItems4El}>
             <Link to="/contact" className="nav-link nav-link4">
               Contact
             </Link>
           </li>
+          <li className="nav-item nav-item4" ref={navItems2El}>
+            <Link to="/about" className="nav-link nav-link2">
+              About Me
+            </Link>
+          </li>
           <br />
           <li className="nav-item nav-item5" ref={navItems5El}>
-            <Link
-              to="/login"
-              className="nav-link nav-link5"
-              onSubmit={submitHandler}
-            >
+            <Link to="/login" className="nav-link nav-link5">
               Login
             </Link>
           </li>
