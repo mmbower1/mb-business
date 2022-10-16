@@ -31,25 +31,21 @@ export const login = (email, password) => async (dispatch) => {
     dispatch({
       type: USER_LOGIN_REQUEST,
     });
-
     const config = {
       headers: {
         "Content-Type": "application/json",
       },
     };
-
     const { data } = await axios.post(
       "/login",
       //   "https://api.mbdesign.com/login",
       { email, password },
       config
     );
-
     dispatch({
       type: USER_LOGIN_SUCCESS,
       payload: data,
     });
-
     localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
     dispatch({
@@ -66,26 +62,26 @@ export const logout = () => (dispatch) => {
   localStorage.removeItem("userInfo");
   dispatch({ type: USER_LOGOUT });
   dispatch({ type: USER_DETAILS_RESET });
-  dispatch({ type: ORDER_LIST_MY_RESET });
+  // dispatch({ type: ORDER_LIST_MY_RESET });
   dispatch({ type: USER_LIST_RESET });
 };
 
-export const register = (name, email, password) => async (dispatch) => {
+export const register = (name, email, password, password2) => async (
+  dispatch
+) => {
   try {
     dispatch({
       type: USER_REGISTER_REQUEST,
     });
-
     const config = {
       headers: {
         "Content-Type": "application/json",
       },
     };
-
     const { data } = await axios.post(
       "/register",
       //   "https://api.mbdesign.com/register",
-      { name, email, password },
+      { name, email, password, password2 },
       config
     );
 
@@ -93,7 +89,6 @@ export const register = (name, email, password) => async (dispatch) => {
       type: USER_REGISTER_SUCCESS,
       payload: data,
     });
-
     dispatch({
       type: USER_LOGIN_SUCCESS,
       payload: data,

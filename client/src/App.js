@@ -10,6 +10,7 @@ import Register from "./containers/register/Register";
 import Work from "./containers/work/Work";
 
 // components
+import Loader from "./components/loader/Loader";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
@@ -30,18 +31,18 @@ function App() {
       <Router>
         <Fragment>
           <Switch>
-            {/* <Suspense fallback={<Spinner />}> */}
-            <div className="App">
-              <Header />
-              <Route exact path="/" component={Homepage} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/contact" component={Contact} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/register" component={Register} />
-              <Route exact path="/work" component={Work} />
-              <Footer />
-            </div>
-            {/* </Suspense> */}
+            <Suspense fallback={<Loader />}>
+              <div className="App">
+                <Header />
+                <Route exact path="/" component={Homepage} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/contact" component={Contact} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
+                <Route exact path="/work" component={Work} />
+                <Footer />
+              </div>
+            </Suspense>
           </Switch>
         </Fragment>
       </Router>

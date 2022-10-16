@@ -32,15 +32,15 @@ router.get(
 router.post(
   "/",
   asyncHandler(async (req, res) => {
-    const { name, email, password } = req.body;
-    if (!name || !email || !password) {
+    const { name, email, password, password2 } = req.body;
+    if (!name || !email || !password || !password2) {
       res.status(400);
       throw new Error("Please add all fields");
     }
     const userExists = await User.findOne({ email });
     if (userExists) {
       res.status(400);
-      throw new Error("User already exists");
+      throw new Error("This email already exists. Please try another email.");
     }
     const salt = await bcrypt.genSalt(10);
     const hashedPw = await bcrypt.hash(password, salt);
@@ -48,6 +48,7 @@ router.post(
       name,
       email,
       password: hashedPw,
+      password2: hashedPw,
     });
     if (user) {
       res.status(201).json({

@@ -1,13 +1,21 @@
 import React, { useState, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-// npms
+// styles
 import "./Header.scss";
+
+// actions
+import { logout } from "../../actions/userActions";
 
 const Header = ({ history, location }) => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const dispatch = useDispatch();
+  const userLogin = useSelector((state) => state.userLoginReducer);
+  const { loading, error, userInfo } = userLogin;
   // const redirect = location.search ? location.search.split("=")[1] : "/";
 
   // };
@@ -16,10 +24,11 @@ const Header = ({ history, location }) => {
   //   console.log("useeffect");
   // }, [history]);
 
-  // const onClick = (e) => {
-  //   e.preventDefault();
-  //   console.log("submit handled");
-  // };
+  const logoutHandler = (e) => {
+    e.preventDefault();
+    dispatch(logout());
+    console.log(logout);
+  };
 
   const menuBtnEl = useRef(null);
   const menuEl = useRef(null);
@@ -95,26 +104,40 @@ const Header = ({ history, location }) => {
               Home
             </Link>
           </li>
-          <li className="nav-item nav-item2" ref={navItems3El}>
+          <li className="nav-item nav-item2" ref={navItems2El}>
             <Link to="/work" className="nav-link nav-link3">
               Courses
             </Link>
           </li>
-          <li className="nav-item nav-item3" ref={navItems4El}>
+          <li className="nav-item nav-item3" ref={navItems3El}>
             <Link to="/contact" className="nav-link nav-link4">
               Contact
             </Link>
           </li>
-          <li className="nav-item nav-item4" ref={navItems2El}>
-            <Link to="/about" className="nav-link nav-link2">
-              About Me
+          <li className="nav-item nav-item4" ref={navItems4El}>
+            <Link to="/about" className="nav-link nav-link4">
+              About
             </Link>
           </li>
           <br />
           <li className="nav-item nav-item5" ref={navItems5El}>
-            <Link to="/login" className="nav-link nav-link5">
-              Login
-            </Link>
+            {userInfo ? (
+              <Link to="/profile/:id" className="nav-link">
+                Your Account
+              </Link>
+            ) : (
+              <Link to="/login" className="nav-link">
+                Login
+              </Link>
+            )}
+            <br />
+            {userInfo ? (
+              <Link to="/" className="nav-link" onClick={logoutHandler}>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout
+              </Link>
+            ) : (
+              <div></div>
+            )}
           </li>
         </ul>
       </nav>

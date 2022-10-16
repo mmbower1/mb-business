@@ -38,7 +38,7 @@ router.post(
   asyncHandler(async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
-    if (user && (await bcrypt.compare(password, user.password))) {
+    if (user && (await user.matchPassword(password))) {
       res.json({
         _id: user.id,
         name: user.name,
