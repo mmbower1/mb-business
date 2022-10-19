@@ -26,7 +26,14 @@ import {
   USER_UPDATE_FAIL,
 } from "../actions/types";
 
-export const userLoginReducer = (state = {}, action) => {
+const initialState = {
+  token: localStorage.getItem("token"),
+  isAuthenticated: null,
+  // loading: true,
+  user: null,
+};
+
+export const userLoginReducer = (state = initialState, action) => {
   switch (action.type) {
     case USER_LOGIN_REQUEST:
       return { loading: true };
@@ -41,7 +48,7 @@ export const userLoginReducer = (state = {}, action) => {
   }
 };
 
-export const userRegisterReducer = (state = {}, action) => {
+export const userRegisterReducer = (state = initialState, action) => {
   switch (action.type) {
     case USER_REGISTER_REQUEST:
       return { loading: true };
@@ -69,7 +76,7 @@ export const userDetailsReducer = (state = { user: {} }, action) => {
   }
 };
 
-export const userUpdateProfileReducer = (state = {}, action) => {
+export const userUpdateProfileReducer = (state = initialState, action) => {
   switch (action.type) {
     case USER_UPDATE_PROFILE_REQUEST:
       return { loading: true };
@@ -97,7 +104,7 @@ export const userListReducer = (state = { users: [] }, action) => {
   }
 };
 
-export const userDeleteReducer = (state = {}, action) => {
+export const userDeleteReducer = (state = initialState, action) => {
   switch (action.type) {
     case USER_DELETE_REQUEST:
       return { loading: true };

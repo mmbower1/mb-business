@@ -7,7 +7,7 @@ import { alertReducer } from "./alertReducers";
 import {
   userLoginReducer,
   userRegisterReducer,
-  // userDetailsReducer,
+  userDetailsReducer,
   // userUpdateProfileReducer,
   // userListReducer,
   // userDeleteReducer,
@@ -22,6 +22,7 @@ import {
 
 const rootReducer = combineReducers({
   alertReducer,
+  userDetailsReducer,
   userLoginReducer,
   userRegisterReducer,
 });

@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // styles
@@ -15,7 +14,7 @@ const Header = ({ history, location }) => {
 
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLoginReducer);
-  const { loading, error, userInfo } = userLogin;
+  const { userInfo } = userLogin;
   // const redirect = location.search ? location.search.split("=")[1] : "/";
 
   // };
@@ -35,7 +34,6 @@ const Header = ({ history, location }) => {
   const menuNavEl = useRef(null);
   const menuBrandingEl = useRef(null);
   const navItemsEl = useRef(null);
-  console.log(navItemsEl);
 
   //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
   const navItems1El = useRef(null);
@@ -122,7 +120,7 @@ const Header = ({ history, location }) => {
           <br />
           <li className="nav-item nav-item5" ref={navItems5El}>
             {userInfo ? (
-              <Link to="/profile/:id" className="nav-link">
+              <Link to="/profile" className="nav-link">
                 Your Account
               </Link>
             ) : (

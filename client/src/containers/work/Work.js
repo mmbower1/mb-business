@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Work.scss";
 
@@ -12,59 +13,59 @@ const Work = () => {
         <h2 className="sm-heading">Check out the projects</h2>
         <div className="projects">
           <div className="item">
-            <a href="#!">
+            <Link to="#!">
               <img src="" alt="project1" />
-            </a>
-            <a href="" className="btn-light">
+            </Link>
+            <Link to="" className="btn-light">
               <i className="fas fa-eye"></i> Project
-            </a>
-            <a href="" className="btn-dark">
+            </Link>
+            <Link to="" className="btn-dark">
               <i className="fab fa-github"></i> Github
-            </a>
+            </Link>
           </div>
           <div className="item">
-            <a href="#!">
+            <Link to="#!">
               <img src="" alt="project2" />
-            </a>
-            <a href="" className="btn-light">
+            </Link>
+            <Link to="" className="btn-light">
               <i className="fas fa-eye"></i> Project
-            </a>
-            <a href="" className="btn-dark">
+            </Link>
+            <Link to="" className="btn-dark">
               <i className="fab fa-github"></i> Github
-            </a>
+            </Link>
           </div>
           <div className="item">
-            <a href="#!">
+            <Link to="#!">
               <img src="" alt="project3" />
-            </a>
-            <a href="" className="btn-light">
+            </Link>
+            <Link to="" className="btn-light">
               <i className="fas fa-eye"></i> Project
-            </a>
-            <a href="" className="btn-dark">
+            </Link>
+            <Link to="" className="btn-dark">
               <i className="fab fa-github"></i> Github
-            </a>
+            </Link>
           </div>
           <div className="item">
-            <a href="#!">
+            <Link to="#!">
               <img src="" alt="project4" />
-            </a>
-            <a href="" className="btn-light">
+            </Link>
+            <Link to="" className="btn-light">
               <i className="fas fa-eye"></i> Project
-            </a>
-            <a href="" className="btn-dark">
+            </Link>
+            <Link to="" className="btn-dark">
               <i className="fab fa-github"></i> Github
-            </a>
+            </Link>
           </div>
           <div className="item">
-            <a href="#!">
+            <Link to="#!">
               <img src="" alt="project5" />
-            </a>
-            <a href="" className="btn-light">
+            </Link>
+            <Link to="" className="btn-light">
               <i className="fas fa-eye"></i> Project
-            </a>
-            <a href="" className="btn-dark">
+            </Link>
+            <Link to="" className="btn-dark">
               <i className="fab fa-github"></i> Github
-            </a>
+            </Link>
           </div>
         </div>
       </main>

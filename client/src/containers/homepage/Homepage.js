@@ -1,7 +1,7 @@
 import React from "react";
-import {} from "react";
+import { Link } from "react-router-dom";
 import "./Homepage.scss";
-import { expressImg } from "../../img/express.png";
+// import { expressImg } from "../../img/express.png";
 
 // components
 
@@ -21,17 +21,17 @@ const Homepage = () => {
         Web design, hosting, courses & personal tutoring needs.
       </h2>
       <div className="icons">
-        <a href="">
+        <Link to="">
           <i className="fab fa-brands fa-envira fa-4x"></i>
-        </a>
-        <a href="" className="expressjs">
+        </Link>
+        <Link to="" className="expressjs">
           {/* <img src={expressImg} alt="" /> */}
           ExpressJS
-        </a>
+        </Link>
         <i className="fab fa-brands fa-react fa-4x"></i>
-        <a href="">
+        <Link to="">
           <i className="fab fa-brands fa-node fa-4x"></i>
-        </a>
+        </Link>
       </div>
     </main>
   );

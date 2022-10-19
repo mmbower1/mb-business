@@ -20,7 +20,7 @@ const generateToken = require("../utils/generateToken");
 // @desc     Get profile
 // @access   Private
 router.get(
-  "/",
+  "/:id",
   protect,
   asyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);

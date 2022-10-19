@@ -26,6 +26,8 @@ h3 {
 }
 
 main {
+  @include background;
+
   min-height: calc(100vh - 60px);
   padding: 4rem;
 
@@ -55,5 +57,5 @@ main {
 }
 
 .text-secondary {
-  color: $secondary-color;
+  color: $secondary-color !important;
 }

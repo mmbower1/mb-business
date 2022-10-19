@@ -1,11 +1,15 @@
-import React, { Fragment, lazy, Suspense } from "react";
+import React, { Fragment, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// actions
+import { getUserDetails } from "./actions/userActions";
 
 // containers
 import About from "./containers/about/About";
 import Contact from "./containers/contact/Contact";
 import Homepage from "./containers/homepage/Homepage";
 import Login from "./containers/login/Login";
+import Profile from "./containers/profile/Profile";
 import Register from "./containers/register/Register";
 import Work from "./containers/work/Work";
 
@@ -24,8 +28,17 @@ import {
   // persistor
 } from "./store";
 import { Provider } from "react-redux";
+import setAuthToken from "./utils/setAuthToken";
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
 function App() {
+  useEffect(() => {
+    store.dispatch(getUserDetails());
+  }, []);
+
   return (
     <Provider store={store}>
       <Router>
@@ -38,6 +51,7 @@ function App() {
                 <Route exact path="/about" component={About} />
                 <Route exact path="/contact" component={Contact} />
                 <Route exact path="/login" component={Login} />
+                <Route exact path="/profile" component={Profile} />
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/work" component={Work} />
                 <Footer />

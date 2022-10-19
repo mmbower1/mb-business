@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -7,47 +8,53 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="footer-col">
-            <h4>'Logo'</h4>
-            <ul>
-              <li>
-                <a href="#"></a>
-              </li>
-            </ul>
+            <h4>MB Design</h4>
+            <h6>PO Box 123, Sacramento, CA 95819</h6>
+            <h6>
+              <i className="fa fa-regular fa-envelope fa"></i> Email:
+            </h6>
+            <h6 className="copyright">Copyright © 2023 MB Design LLC</h6>
           </div>
           <div className="footer-col">
-            <h4>Socials</h4>
+            <h4>Follow</h4>
             <div className="social-links">
-              <a href="#">
-                <i className="fab fa-gmail"></i>
-              </a>
-              <a href="#">Github</a>
-              <a href="#">Linkedin</a>
-              <a href="#">Twitter</a>
+              <Link to="#">
+                <i className="fab fa-brands fa-github fa-2x"></i>
+              </Link>
+              <Link to="#">
+                <i className="fab fa-brands fa-linkedin fa-2x"></i>
+              </Link>
+              <Link to="#">
+                <i className="fab fa-brands fa-twitter fa-2x"></i>
+              </Link>
+              <Link to="#">
+                <i className="fab fa-brands fa-youtube fa-2x"></i>
+              </Link>
             </div>
           </div>
           <div className="footer-col tech">
             <h4>Tech</h4>
             <ul>
               <li>
-                <a href="#">HTML/CSS</a>
+                <Link to="#">HTML/CSS</Link>
               </li>
               <li>
-                <a href="#">Javascript</a>
+                <Link to="#">Javascript</Link>
               </li>
               <li>
-                <a href="#">ReactJS</a>
+                <Link to="#">ReactJS</Link>
               </li>
               <li>
-                <a href="#">Express</a>
+                <Link to="#">Express</Link>
               </li>
               <li>
-                <a href="#">Mongo</a>
+                <Link to="#">Mongo</Link>
               </li>
               <li>
-                <a href="#">NodeJS</a>
+                <Link to="#">NodeJS</Link>
               </li>
               <li>
-                <a href="#">AWS</a>
+                <Link to="#">AWS</Link>
               </li>
             </ul>
           </div>
@@ -55,10 +62,10 @@ const Footer = () => {
             <h4>Legal</h4>
             <ul>
               <li>
-                <a href="#">FAQ</a>
+                <Link to="#">FAQ</Link>
               </li>
               <li>
-                <a href="#">Policy</a>
+                <Link to="#">Policy</Link>
               </li>
             </ul>
           </div>

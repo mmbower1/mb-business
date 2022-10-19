@@ -14,19 +14,20 @@ const { protect } = require("../middleware/authMiddleware");
 // utils
 const generateToken = require("../utils/generateToken");
 
-// @route    GET /login/me
-// @desc     Get user data
+// @route    GET /login/:id
+// @desc     Get user data on every screen load so it stays logged in
 // @access   Private
 router.get(
-  "/me",
+  "/:id",
   protect,
   asyncHandler(async (req, res) => {
-    const { _id, name, email } = await User.findById(req.user.id);
-    res.status(200).json({
-      id: _id,
-      name,
-      email,
-    });
+    const user = await User.findById(req.user.id).select("-password");
+    if (user) {
+      res.status(200).json(user);
+    } else {
+      res.status(404);
+      throw new Error("User not found");
+    }
   })
 );
 
