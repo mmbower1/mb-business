@@ -7,10 +7,10 @@ const About = () => {
   return (
     <>
       <main id="about">
-        <h1 className="lg-heading">
+        <h1 className="lg-heading sm-heading">
           About <span className="text-secondary">Me</span>
         </h1>
-        <h2 className="sm-heading">My life in a nutshell..</h2>
+        {/* <h2 className="sm-heading">My life in a nutshell..</h2> */}
         <div className="about-info">
           <img src={aboutImage} alt="Matt B." className="bio-image" />
           <div className="bio">
@@ -26,8 +26,8 @@ const About = () => {
             </p>
           </div>
           <div className="job job-1">
-            <h3>ABC webshop</h3>
-            <h6>Full Stack Developer</h6>
+            <h3>Subscribe to my Youtube:</h3>
+            <h6>MB Tutorials</h6>
             <p>
               {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
               fugiat tempora voluptate earum totam harum placeat, soluta
@@ -36,8 +36,8 @@ const About = () => {
             </p>
           </div>
           <div className="job job-2">
-            <h3>123 designers</h3>
-            <h6>Full Stack Engineer</h6>
+            <h3>Video 1</h3>
+            <h6>title</h6>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
               fugiat tempora voluptate earum totam harum placeat, soluta
@@ -46,8 +46,8 @@ const About = () => {
             </p>
           </div>
           <div className="job job-3">
-            <h3>Philly Eagles</h3>
-            <h6>Highest rated NFL team</h6>
+            <h3>Video 2</h3>
+            <h6>title</h6>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
               fugiat tempora voluptate earum totam harum placeat, soluta
@@ -57,7 +57,6 @@ const About = () => {
           </div>
         </div>
       </main>
-      <footer id="main-footer">Copyright &copy; 2023</footer>
     </>
   );
 };

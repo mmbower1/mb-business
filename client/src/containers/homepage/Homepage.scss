@@ -47,11 +47,36 @@ main {
     }
   }
 
+  .schedule-link {
+    border: 15px solid $secondary-color;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 80px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+  }
+
   &#homepage {
     overflow: hidden;
 
     h1 {
       margin-top: 20vh;
+    }
+  }
+  .sliders {
+    // margin-top: 600px;
+
+    .slider {
+      background-color: $secondary-color;
+      box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+      border-radius: 10%;
+      border-radius: 10p 10px 10px 10px;
+      margin-top: 100px;
+      overflow: hidden;
+      height: 600px;
+      width: 100%;
     }
   }
 }

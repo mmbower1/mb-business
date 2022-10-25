@@ -69,7 +69,6 @@ const Work = () => {
           </div>
         </div>
       </main>
-      <footer id="main-footer">Copyright &copy; 2023</footer>
     </>
   );
 };
