@@ -1,8 +1,8 @@
 @import "../../scss/App.scss";
 
 #footer {
-  background: rgba(255, 255, 0, 0.367);
-  color: set-text-color($primary-color);
+  background: $secondary-color;
+  // color: black;
   height: 260px;
   padding: 1rem;
   text-align: center;

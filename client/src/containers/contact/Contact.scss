@@ -1,5 +1,9 @@
 @import "../../scss/App.scss";
 
+body {
+  @include contact-background;
+}
+
 .boxes {
   align-items: center;
   display: flex;

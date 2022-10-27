@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -11,6 +11,7 @@ import { logout } from "../../actions/userActions";
 
 const Header = ({ history, location }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [currentPage, setCurrentPage] = useState(null);
 
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLoginReducer);
@@ -19,9 +20,10 @@ const Header = ({ history, location }) => {
 
   // };
 
-  // useEffect(() => {
-  //   console.log("useeffect");
-  // }, [history]);
+  useEffect(() => {
+    const pathname = window.location.pathname.replace("/", "");
+    setCurrentPage(pathname);
+  }, [history]);
 
   const logoutHandler = (e) => {
     e.preventDefault();
@@ -82,6 +84,8 @@ const Header = ({ history, location }) => {
 
       //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
       setShowMenu(false);
+      const pathname = window.location.pathname.replace("/", "");
+      setCurrentPage(pathname);
     }
   };
 
@@ -97,28 +101,56 @@ const Header = ({ history, location }) => {
           <div className="portrait"></div>
         </div>
         <ul className="menu-nav" ref={menuNavEl}>
-          <li className="nav-item nav-item1 current" ref={navItems1El}>
+          <li
+            className={`nav-item nav-item1 ${!currentPage ? "current" : ""}`}
+            ref={navItems1El}
+            onClick={toggleMenu}
+          >
             <Link to="/" className="nav-link nav-link1">
               Home
             </Link>
           </li>
-          <li className="nav-item nav-item2" ref={navItems2El}>
+          <li
+            className={`nav-item nav-item2 ${
+              currentPage === "work" ? "current" : ""
+            }`}
+            ref={navItems2El}
+            onClick={toggleMenu}
+          >
             <Link to="/work" className="nav-link nav-link3">
               Courses
             </Link>
           </li>
-          <li className="nav-item nav-item3" ref={navItems3El}>
+          <li
+            className={`nav-item nav-item3 ${
+              currentPage === "contact" ? "current" : ""
+            }`}
+            ref={navItems3El}
+            onClick={toggleMenu}
+          >
             <Link to="/contact" className="nav-link nav-link4">
               Contact
             </Link>
           </li>
-          <li className="nav-item nav-item4" ref={navItems4El}>
+          <li
+            className={`nav-item nav-item4 ${
+              currentPage === "about" ? "current" : ""
+            }`}
+            ref={navItems4El}
+            onClick={toggleMenu}
+          >
             <Link to="/about" className="nav-link nav-link4">
               About
             </Link>
           </li>
           <br />
-          <li className="nav-item nav-item5" ref={navItems5El}>
+          <li
+            className={`nav-item nav-item5 ${
+              currentPage === "login" ? "current" : ""
+            }`}
+            ref={navItems5El}
+            onClick={toggleMenu}
+          >
             {userInfo ? (
               <Link to="/profile" className="nav-link">
                 Your Account

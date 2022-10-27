@@ -23,6 +23,27 @@
   }
 }
 
+@mixin contact-background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $contact-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        background: rgba($primary-color, $background-opacity);
+        content: "";
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+  }
+}
+
 // media query mixins
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
