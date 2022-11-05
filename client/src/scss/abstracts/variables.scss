@@ -3,7 +3,14 @@ $primary-color: #444;
 $secondary-color: #eece1a;
 
 // images
+$show-about-image: true;
+$show-contact-image: true;
 $show-home-image: true;
+$show-work-image: true;
+
+$about-image: url("../../img/1.jpg");
+$contact-image: url("../../img/2.jpg");
 $home-image: url("../../img/coding.jpg");
-$contact-image: url("../../img/desktops.jpg");
+$work-image: url("../../img/3.jpg");
+
 $background-opacity: 0.9;

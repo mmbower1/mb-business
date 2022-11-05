@@ -34,10 +34,19 @@
     background: lighten($primary-color, 5);
     border-bottom: $secondary-color 5px solid;
     padding: 0.5rem;
+
+    .youtube-link {
+      display: flex;
+
+      a {
+        margin: -5px 0 0 10px;
+      }
+    }
   }
 
   .job-1 {
     grid-area: job1;
+    margin: 0 20px 0 0;
   }
 
   .job-2 {

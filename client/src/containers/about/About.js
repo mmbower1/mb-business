@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import aboutImage from "../../img/portrait.jpg";
 
 import "./About.scss";
@@ -26,8 +27,17 @@ const About = () => {
             </p>
           </div>
           <div className="job job-1">
-            <h3>Subscribe to my Youtube:</h3>
-            <h6>MB Tutorials</h6>
+            <h3>Subscribe to my Youtube!</h3>
+            <br />
+            <span className="youtube-link">
+              <h6>MB Tutorials:</h6>
+              <a href="https://www.youtube.com/channel/UCnIEe_2WcwQd-mZeOyVOWzA/videos">
+                <i
+                  className="fab fa-brands fa-youtube fa-2x"
+                  style={{ color: "red" }}
+                ></i>
+              </a>
+            </span>
             <p>
               {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
               fugiat tempora voluptate earum totam harum placeat, soluta

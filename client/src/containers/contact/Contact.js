@@ -8,7 +8,7 @@ const Contact = () => {
         <h1 className="lg-heading">
           Contact <span className="text-secondary">Me</span>
         </h1>
-        <h2 className="sm-heading">Please reach out!</h2>
+        <h2 className="sm-heading">Please reach out for scheduling.</h2>
         <div className="boxes">
           <div>
             <span className="text-secondary">Email:</span> @mttbwr91@gmail.com
@@ -22,7 +22,6 @@ const Contact = () => {
           </div>
         </div>
       </main>
-      <footer id="main-footer">Copyright &copy; 2023</footer>
     </>
   );
 };

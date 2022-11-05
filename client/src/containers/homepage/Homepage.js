@@ -36,10 +36,10 @@ const Homepage = () => {
         </Link>
       </div>
       <div className="schedule-link">Get your personal website built now!</div>
-      <div className="sliders">
+      {/* <div className="sliders">
         <div data-aos="fade-right" className="slider"></div>
         <div data-aos="fade-left" className="slider"></div>
-      </div>
+      </div> */}
     </main>
   );
 };

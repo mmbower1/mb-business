@@ -35,7 +35,7 @@ const Header = ({ history, location }) => {
   const menuEl = useRef(null);
   const menuNavEl = useRef(null);
   const menuBrandingEl = useRef(null);
-  const navItemsEl = useRef(null);
+  // const navItemsEl = useRef(null);
 
   //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
   const navItems1El = useRef(null);
