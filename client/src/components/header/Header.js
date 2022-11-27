@@ -118,7 +118,7 @@ const Header = ({ history, location }) => {
             onClick={toggleMenu}
           >
             <Link to="/work" className="nav-link nav-link3">
-              Courses
+              Websites
             </Link>
           </li>
           <li

@@ -9,21 +9,25 @@ const About = () => {
     <>
       <main id="about">
         <h1 className="lg-heading sm-heading">
-          About <span className="text-secondary">Me</span>
+          About
+          {/* <span className="text-secondary">Me</span> */}
         </h1>
         {/* <h2 className="sm-heading">My life in a nutshell..</h2> */}
         <div className="about-info">
           <img src={aboutImage} alt="Matt B." className="bio-image" />
           <div className="bio">
-            <h3 className="text-secondary">BIO</h3>
+            <h3 className="text-secondary">BIO:</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eum
-              vero voluptates voluptatem porro provident eos, minima sit alias
-              illum eaque iste quis veniam. Repellat sit animi harum voluptatum
-              ab. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates, tempora placeat, suscipit ex culpa beatae impedit
-              excepturi numquam nemo molestiae magnam quos aspernatur cumque
-              harum exercitationem at cupiditate temporibus perspiciatis.
+              {" "}
+              My coding journey begain in the summer of 2017 after ironically
+              obtaining a degree not related to computer science. The following
+              year, I graduated from the UC Davis Trilogy Education Services
+              Bootcamp in 2018. I have worked three different jobs as a
+              professional web developer and engineer since 2018 for a
+              cryptocurrency startup, an IP networking company, as well as a
+              coding instructor for Hackingtons code school based in Northern
+              California. I am here for your coding and website building needs.
+              Please kindly reach out!
             </p>
           </div>
           <div className="job job-1">
@@ -38,12 +42,7 @@ const About = () => {
                 ></i>
               </a>
             </span>
-            <p>
-              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              fugiat tempora voluptate earum totam harum placeat, soluta
-              necessitatibus sint deleniti aut incidunt accusamus distinctio
-              fuga similique aliquam ullam nobis quas? */}
-            </p>
+            <p></p>
           </div>
           <div className="job job-2">
             <h3>Video 1</h3>

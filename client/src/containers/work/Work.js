@@ -17,7 +17,7 @@ const Work = () => {
               <img src="" alt="project1" />
             </Link>
             <Link to="" className="btn-light">
-              <i className="fas fa-eye"></i> Project
+              <i className="fas fa-eye"></i> Crypto Converter
             </Link>
             <Link to="" className="btn-dark">
               <i className="fab fa-github"></i> Github
@@ -28,7 +28,7 @@ const Work = () => {
               <img src="" alt="project2" />
             </Link>
             <Link to="" className="btn-light">
-              <i className="fas fa-eye"></i> Project
+              <i className="fas fa-eye"></i> EcoTreeCare
             </Link>
             <Link to="" className="btn-dark">
               <i className="fab fa-github"></i> Github
@@ -39,7 +39,7 @@ const Work = () => {
               <img src="" alt="project3" />
             </Link>
             <Link to="" className="btn-light">
-              <i className="fas fa-eye"></i> Project
+              <i className="fas fa-eye"></i> MonarchTracker.com
             </Link>
             <Link to="" className="btn-dark">
               <i className="fab fa-github"></i> Github
