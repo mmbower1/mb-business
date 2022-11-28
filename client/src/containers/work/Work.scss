@@ -1,6 +1,10 @@
 @import "../../scss/App.scss";
 
 #work {
+  .sm-heading {
+    color: #0067a5;
+  }
+
   .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import aboutImage from "../../img/portrait.jpg";
 
 import "./About.scss";
+import "./Progress.css";
 
 const About = () => {
   return (
@@ -45,24 +46,60 @@ const About = () => {
             <p></p>
           </div>
           <div className="job job-2">
-            <h3>Video 1</h3>
-            <h6>title</h6>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              fugiat tempora voluptate earum totam harum placeat, soluta
-              necessitatibus sint deleniti aut incidunt accusamus distinctio
-              fuga similique aliquam ullam nobis quas?
-            </p>
+            <video
+              id="video"
+              className="screen"
+              // src="videos/gone.mp4"
+              poster="../../img/poster.png"
+            ></video>
+            <div class="controls">
+              <button class="btn" id="play">
+                <i class="fa fa-play fa-2x"></i>
+              </button>
+              <button class="btn" id="stop">
+                <i class="fa fa-stop fa-2x"></i>
+              </button>
+              <input
+                type="range"
+                id="progress"
+                class="progress"
+                min="0"
+                max="100"
+                step="0.1"
+                value="0"
+              />
+              <span class="timestamp" id="timestamp">
+                00:00
+              </span>
+            </div>
           </div>
           <div className="job job-3">
-            <h3>Video 2</h3>
-            <h6>title</h6>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              fugiat tempora voluptate earum totam harum placeat, soluta
-              necessitatibus sint deleniti aut incidunt accusamus distinctio
-              fuga similique aliquam ullam nobis quas?
-            </p>
+            <video
+              id="video"
+              class="screen"
+              src="videos/gone.mp4"
+              poster="img/poster.png"
+            ></video>
+            <div class="controls">
+              <button class="btn" id="play">
+                <i class="fa fa-play fa-2x"></i>
+              </button>
+              <button class="btn" id="stop">
+                <i class="fa fa-stop fa-2x"></i>
+              </button>
+              <input
+                type="range"
+                id="progress"
+                class="progress"
+                min="0"
+                max="100"
+                step="0.1"
+                value="0"
+              />
+              <span class="timestamp" id="timestamp">
+                00:00
+              </span>
+            </div>
           </div>
         </div>
       </main>
