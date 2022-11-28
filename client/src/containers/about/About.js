@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// photos
 import aboutImage from "../../img/portrait.jpg";
+import playButton from "../../img/poster.png";
 
 import "./About.scss";
 import "./Progress.css";
@@ -50,7 +52,7 @@ const About = () => {
               id="video"
               className="screen"
               // src="videos/gone.mp4"
-              poster="../../img/poster.png"
+              poster={playButton}
             ></video>
             <div class="controls">
               <button class="btn" id="play">
@@ -78,7 +80,7 @@ const About = () => {
               id="video"
               class="screen"
               src="videos/gone.mp4"
-              poster="img/poster.png"
+              poster={playButton}
             ></video>
             <div class="controls">
               <button class="btn" id="play">

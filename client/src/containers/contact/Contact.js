@@ -15,7 +15,7 @@ const Contact = () => {
             <span className="text-secondary">Phone:</span> (530) 219-1250
           </div>
           <div>
-            <span className="text-secondary">Address:</span> 675 53rd St,
+            <span className="text-secondary">City:</span>
             Sacramento, CA 95819
           </div>
         </div>

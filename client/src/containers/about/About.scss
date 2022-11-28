@@ -31,16 +31,14 @@
   }
 
   .job {
+    align-items: center;
     background: lighten($primary-color, 5);
     border-bottom: $secondary-color 5px solid;
-    align-items: center;
     background-color: #666;
     display: flex;
     flex-direction: column;
     font-family: "Questrial", sans-serif;
     justify-content: center;
-    margin: 0;
-    max-height: 100vh;
     padding: 0.5rem;
 
     .youtube-link {
@@ -55,7 +53,7 @@
   .job-1 {
     border-radius: 5px;
     grid-area: job1;
-    margin: 60px 100px 60px 0px;
+    margin: 180px 100px 180px 0px;
   }
 
   .job-2 {
@@ -64,6 +62,7 @@
 
   .job-3 {
     grid-area: job3;
+    // margin: 180px 100px 180px 0px;
   }
 }
 
