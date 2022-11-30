@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 // photos
 import aboutImage from "../../img/portrait.jpg";
 import playButton from "../../img/poster.png";
+import sortListMP4 from "../../img/sortList.mp4";
+import mernStructureMP4 from "../../img/mernStructure.mp4";
 
 import "./About.scss";
 import "./Progress.css";
@@ -51,7 +53,7 @@ const About = () => {
             <video
               id="video"
               className="screen"
-              // src="videos/gone.mp4"
+              src={sortListMP4}
               poster={playButton}
             ></video>
             <div class="controls">
@@ -79,7 +81,7 @@ const About = () => {
             <video
               id="video"
               class="screen"
-              src="videos/gone.mp4"
+              src={mernStructureMP4}
               poster={playButton}
             ></video>
             <div class="controls">
