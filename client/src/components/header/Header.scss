@@ -144,3 +144,12 @@ header {
     transition-delay: $x * 0.1s;
   }
 }
+
+@media (max-width: 574px) {
+  header {
+    .menu-btn {
+      top: 20px;
+      left: 50px;
+    }
+  }
+}

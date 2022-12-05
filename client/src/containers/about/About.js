@@ -51,7 +51,7 @@ const About = () => {
           </div>
           <div className="job job-2">
             <video
-              id="video"
+              id="video1"
               className="screen"
               src={sortListMP4}
               poster={playButton}
@@ -66,7 +66,7 @@ const About = () => {
               <input
                 type="range"
                 id="progress"
-                class="progress"
+                className="progress"
                 min="0"
                 max="100"
                 step="0.1"
@@ -79,8 +79,8 @@ const About = () => {
           </div>
           <div className="job job-3">
             <video
-              id="video"
-              class="screen"
+              id="video2"
+              className="screen"
               src={mernStructureMP4}
               poster={playButton}
             ></video>
