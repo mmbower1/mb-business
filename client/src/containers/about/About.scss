@@ -1,69 +1,85 @@
 @import "../../scss/App.scss";
 
-.about-info {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr);
-
-  @include mediaMd {
-    grid-template-areas:
-      "bioimage"
-      "bio"
-      "job1"
-      "job2"
-      "job3";
-
-    grid-template-columns: 1fr;
-  }
-
-  .bio {
-    grid-area: bio;
-    font-size: 1.5rem;
-  }
-
-  .bio-image {
-    border: $secondary-color 3px solid;
-    border-radius: 50%;
-    grid-area: bioimage;
-    margin: auto;
-    width: 350px;
-  }
-
-  .job {
-    align-items: center;
-    background: lighten($primary-color, 5);
-    border-bottom: $secondary-color 5px solid;
-    background-color: #666;
-    display: flex;
-    flex-direction: column;
-    font-family: "Questrial", sans-serif;
-    justify-content: center;
-    margin-top: -50px;
-    padding: 0.5rem;
-
-    .youtube-link {
-      display: flex;
-
-      a {
-        margin: -5px 0 0 10px;
-      }
+#about {
+  @media (max-width: 500px) {
+    #main,
+    .lg-heading {
+      font-size: 40px;
     }
   }
 
-  .job-1 {
-    border-radius: 5px;
-    grid-area: job1;
-    margin: 180px 100px 180px 0px;
-  }
+  .about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+    grid-template-columns: repeat(3, 1fr);
 
-  .job-2 {
-    grid-area: job2;
-  }
+    @include mediaMd {
+      grid-template-areas:
+        "bioimage"
+        "bio"
+        "job1"
+        "job2"
+        "job3";
 
-  .job-3 {
-    grid-area: job3;
-    // margin: 180px 100px 180px 0px;
+      grid-template-columns: 1fr;
+    }
+
+    .bio {
+      grid-area: bio;
+      font-size: 1.5rem;
+      @media (max-width: 500px) {
+        font-size: 20px;
+        line-height: 22px;
+      }
+    }
+
+    .bio-image {
+      border: $secondary-color 3px solid;
+      border-radius: 50%;
+      grid-area: bioimage;
+      margin: auto;
+      width: 350px;
+    }
+
+    .job {
+      align-items: center;
+      background: lighten($primary-color, 5);
+      border-bottom: $secondary-color 5px solid;
+      background-color: #666;
+      display: flex;
+      flex-direction: column;
+      font-family: "Questrial", sans-serif;
+      justify-content: center;
+      margin-top: -50px;
+      padding: 0.5rem;
+
+      .youtube-link {
+        display: flex;
+
+        a {
+          margin: -5px 0 0 10px;
+        }
+      }
+    }
+
+    .job-1 {
+      border-radius: 5px;
+      grid-area: job1;
+      margin: 180px 100px 180px 0px;
+      @media (max-width: 500px) {
+        margin: 40px 0 40px 0;
+      }
+    }
+
+    .job-2 {
+      grid-area: job2;
+    }
+
+    .job-3 {
+      grid-area: job3;
+      // margin: 180px 100px 180px 0px;
+    }
   }
 }
 

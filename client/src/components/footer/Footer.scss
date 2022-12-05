@@ -34,6 +34,10 @@
           position: relative;
           text-transform: capitalize;
 
+          @media (max-width: 767px) {
+            font-size: 15px;
+          }
+
           &::before {
             box-sizing: border-box;
             background-color: #391e63;
@@ -57,6 +61,11 @@
               text-decoration: none;
               text-transform: capitalize;
               transition: all 0.3s ease;
+
+              @media (max-width: 767px) {
+                font-size: 11px;
+                line-height: 12px;
+              }
 
               &:hover {
                 color: #ffffff;
@@ -82,6 +91,11 @@
           transition: all 0.5s ease;
           width: 40px;
 
+          @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 45px;
+          }
+
           a:hover {
             background-color: #ffffff;
             color: #24262b;
@@ -95,12 +109,7 @@
 @media (max-width: 767px) {
   .footer-col {
     h4,
-    h6,
-    .tech {
-      font-size: 10px;
-    }
-
-    ul li {
+    h6 {
       font-size: 10px;
     }
   }

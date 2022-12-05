@@ -1,10 +1,18 @@
 @import "../../scss/App.scss";
 
 #work {
+  @media (max-width: 500px) {
+    .lg-heading {
+      font-size: 40px;
+    }
+  }
   .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.7rem;
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     & .item {
       margin-top: 40px;
