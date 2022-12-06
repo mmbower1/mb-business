@@ -39,6 +39,10 @@ main {
   min-height: calc(100vh - 60px);
   padding: 4rem;
 
+  @media (max-width: 500px) {
+    padding: 2rem;
+  }
+
   .icons {
     .expressjs {
       font-size: 22px;

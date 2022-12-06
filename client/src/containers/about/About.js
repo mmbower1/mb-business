@@ -22,6 +22,7 @@ const About = () => {
           <img src={aboutImage} alt="Matt B." className="bio-image" />
           <div className="bio">
             <h3 className="text-secondary">BIO:</h3>
+            <br />
             <p>
               {" "}
               My coding journey begain in the summer of 2017 after ironically
