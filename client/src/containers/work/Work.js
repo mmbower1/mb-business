@@ -11,6 +11,7 @@ const Work = () => {
     <>
       <main id="work">
         <h1 className="lg-heading sm-heading">
+          <i className="fa-regular fab-chart-network"></i>
           My Work
           {/* <span className="text-secondary">Work</span> */}
         </h1>

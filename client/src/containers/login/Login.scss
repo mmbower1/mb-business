@@ -26,6 +26,10 @@
     transform: translate(-50%, -50%);
     width: 400px;
 
+    @media screen and (max-width: 500px) {
+      top: 65%;
+    }
+
     h1 {
       color: black;
       border-bottom: 1px solid silver;
@@ -37,6 +41,10 @@
       border-bottom: 2px solid #adadad;
       margin: 30px 0;
       position: relative;
+
+      @media screen and (max-width: 500px) {
+        margin: 70px 0;
+      }
 
       input {
         background: none;

@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.7rem;
+
     @media (max-width: 500px) {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -29,11 +30,5 @@
         opacity: 0.5;
       }
     }
-  }
-}
-
-@media (max-width: 500px) {
-  #main {
-    padding: 0;
   }
 }

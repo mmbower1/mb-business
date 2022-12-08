@@ -44,13 +44,22 @@ main {
   }
 
   .icons {
+    margin-top: 1rem;
+
     .expressjs {
       font-size: 22px;
+
+      @media (max-width: 500px) {
+        margin-right: 2rem;
+      }
     }
-    margin-top: 1rem;
 
     a {
       padding: 1rem;
+
+      @media (max-width: 500px) {
+        padding: 2rem;
+      }
 
       &:hover {
         color: $secondary-color;
@@ -63,14 +72,25 @@ main {
   }
 
   .schedule-link {
+    @include easeOut;
     border: 15px solid $secondary-color;
     cursor: pointer;
     font-size: 30px;
     padding: 80px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 40px;
     text-align: center;
     width: 100%;
+
+    &:hover {
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      padding: 1rem 2rem;
+
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
 
     @media screen and (max-width: 788px) {
       border: 8px solid $secondary-color;
