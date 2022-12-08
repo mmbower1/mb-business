@@ -2,30 +2,30 @@
   transition: all 0.2s ease-out;
 }
 
-@mixin background {
-  @if $show-home-image {
-    &#bg-img {
-      background: $home-image;
-      background-attachment: fixed;
-      background-size: cover;
+// @mixin background {
+//   @if $show-home-image {
+//     &#bg-img {
+//       background: $home-image;
+//       background-attachment: fixed;
+//       background-size: cover;
 
-      &:after {
-        background: rgba($primary-color, $background-opacity);
-        content: "";
-        position: absolute;
-        height: 100%;
-        top: 0;
-        right: 0;
-        width: 100%;
-        z-index: -1;
+//       &:after {
+//         background: rgba($primary-color, $background-opacity);
+//         content: "";
+//         position: absolute;
+//         height: 100%;
+//         top: 0;
+//         right: 0;
+//         width: 100%;
+//         z-index: -1;
 
-        @media (max-width: 500px) {
-          height: 100%;
-        }
-      }
-    }
-  }
-}
+//         @media (max-width: 500px) {
+//           height: 100%;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // media query mixins
 @mixin mediaSm {

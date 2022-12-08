@@ -1,35 +1,39 @@
 @import "../../scss/App.scss";
 
-.boxes {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 5rem;
+#contact {
+  min-height: 100%;
+  background: linear-gradient(to left top, rgba(0, 0, 0, 0.75), $primary-color),
+    url("../../img/3.jpg");
+  background-size: cover;
+  padding: 4rem;
 
-  div {
-    @include easeOut;
-    border: 3px #fff solid;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    padding: 1.5rem 2.5rem;
-
-    &:hover {
-      background: $secondary-color;
-      color: set-text-color($secondary-color);
-      padding: 1rem 2rem;
-
-      span {
-        color: set-text-color($secondary-color);
-      }
-    }
-  }
-}
-
-@media (max-width: 574px) {
   .boxes {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+
     div {
-      font-size: 1.5rem;
+      @include easeOut;
+      border: 3px #fff solid;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      padding: 1.5rem 2.5rem;
+
+      @media (max-width: 574px) {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        padding: 1rem 2rem;
+
+        span {
+          color: set-text-color($secondary-color);
+        }
+      }
     }
   }
 }
