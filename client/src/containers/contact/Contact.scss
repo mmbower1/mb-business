@@ -7,6 +7,12 @@
   background-size: cover;
   padding: 4rem;
 
+  .lg-heading {
+    background: rgba(lighten($primary-color, 2), 0.5);
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+  }
+
   .boxes {
     align-items: center;
     display: flex;
@@ -34,6 +40,12 @@
           color: set-text-color($secondary-color);
         }
       }
+    }
+  }
+
+  .services {
+    h2 {
+      text-decoration: underline solid 2px;
     }
   }
 }

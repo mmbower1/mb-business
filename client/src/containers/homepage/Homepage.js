@@ -21,7 +21,7 @@ const Homepage = () => {
           MB <span className="text-secondary">Design</span>
         </h1>
         <h2 className="sm-heading">
-          Web design, hosting, courses & personal tutoring needs.
+          Web design, collaborations, courses & personal tutoring needs.
         </h2>
         <div className="icons">
           <Link to="">
@@ -31,7 +31,9 @@ const Homepage = () => {
             {/* <img src={expressImg} alt="" /> */}
             ExpressJS
           </Link>
+          &nbsp;&nbsp;
           <i className="fab fa-brands fa-react fa-4x"></i>
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <Link to="">
             <i className="fab fa-brands fa-node fa-4x"></i>
           </Link>
