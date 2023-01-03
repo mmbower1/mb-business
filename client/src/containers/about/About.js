@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 // photos
 import aboutImage from "../../img/portrait.jpg";
@@ -9,7 +9,65 @@ import mernStructureMP4 from "../../img/mernStructure.mp4";
 import "./About.scss";
 import "./Progress.css";
 
+// utils
+// import {
+//   toggleVideoStatus,
+//   updatePlayIcon,
+//   updateProgress,
+//   setVideoProgress,
+//   stopVideo,
+// } from "./utils.js";
+
 const About = () => {
+  const videoEl = useRef(null);
+  const playEl = useRef(null);
+  const stopEl = useRef(null);
+  const progressEl = useRef(null);
+  const timestampEl = useRef(null);
+
+  // function toggleVideoStatus() {
+  //   if (video.paused) {
+  //     video.play();
+  //   } else {
+  //     video.pause();
+  //   }
+  // }
+
+  // // update play/pause icons
+  // function updatePlayIcon() {
+  //   if (video.paused) {
+  //     play.innerHTML = '<i class="fa fa-play fa-2x"></i>';
+  //   } else {
+  //     play.innerHTML = '<i class="fa fa-pause fa-2x"></i>';
+  //   }
+  // }
+
+  // // update progress and timestamp
+  // function updateProgress() {
+  //   progress.value = (video.currentTime / video.duration) * 100;
+  //   // get minutes
+  //   let mins = Math.floor(video.currentTime / 60);
+  //   if (mins < 10) {
+  //     mins = "0" + String(mins);
+  //   }
+  //   // get seconds
+  //   let secs = Math.floor(video.currentTime % 60);
+  //   if (secs < 10) {
+  //     secs = "0" + String(secs);
+  //   }
+  //   timestamp.innerHTML = `${mins}:${secs}`;
+  // }
+
+  // // set video time to progress
+  // function setVideoProgress() {
+  //   video.currentTime = (+progress.value * video.duration) / 100;
+  // }
+
+  // function stopVideo() {
+  //   video.currentTime = 0;
+  //   video.pause();
+  // }
+
   return (
     <>
       <main id="about">
@@ -56,12 +114,13 @@ const About = () => {
               className="screen"
               src={sortListMP4}
               poster={playButton}
+              useRef={videoEl}
             ></video>
             <div class="controls">
-              <button class="btn" id="play">
+              <button class="btn" id="play" useRef={playEl}>
                 <i class="fa fa-play fa-2x"></i>
               </button>
-              <button class="btn" id="stop">
+              <button class="btn" id="stop" useRef={stopEl}>
                 <i class="fa fa-stop fa-2x"></i>
               </button>
               <input
@@ -72,8 +131,9 @@ const About = () => {
                 max="100"
                 step="0.1"
                 value="0"
+                useRef={progressEl}
               />
-              <span class="timestamp" id="timestamp">
+              <span class="timestamp" id="timestamp" useRef={timestampEl}>
                 00:00
               </span>
             </div>
@@ -84,12 +144,13 @@ const About = () => {
               className="screen"
               src={mernStructureMP4}
               poster={playButton}
+              useRef={videoEl}
             ></video>
             <div class="controls">
-              <button class="btn" id="play">
+              <button class="btn" id="play" useRef={playEl}>
                 <i class="fa fa-play fa-2x"></i>
               </button>
-              <button class="btn" id="stop">
+              <button class="btn" id="stop" useRef={stopEl}>
                 <i class="fa fa-stop fa-2x"></i>
               </button>
               <input
@@ -100,8 +161,9 @@ const About = () => {
                 max="100"
                 step="0.1"
                 value="0"
+                useRef={progressEl}
               />
-              <span class="timestamp" id="timestamp">
+              <span class="timestamp" id="timestamp" useRef={timestampEl}>
                 00:00
               </span>
             </div>

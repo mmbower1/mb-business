@@ -45,6 +45,9 @@
 
   .services {
     h2 {
+      color: $secondary-color;
+      padding-bottom: 6px;
+      text-underline-offset: 6px;
       text-decoration: underline solid 2px;
     }
   }

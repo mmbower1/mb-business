@@ -9,13 +9,13 @@ const Contact = () => {
         <h2 className="">Please reach out for scheduling.</h2>
         <div className="boxes">
           <div>
-            <span className="text-secondary">Email:</span> @mttbwr91@gmail.com
+            <span className="text-secondary">Email:</span> mttbwr91@gmail.com
           </div>
           <div>
             <span className="text-secondary">Phone:</span> (530) 219-1250
           </div>
           <div>
-            <span className="text-secondary">City:</span>
+            <span className="text-secondary">City: </span>
             Sacramento, CA 95819
           </div>
         </div>

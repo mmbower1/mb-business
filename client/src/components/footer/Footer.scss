@@ -23,7 +23,13 @@
         width: 25%;
 
         .copyright {
-          margin-top: 3.5rem;
+          margin-top: 3rem;
+
+          @media (max-width: 767px) {
+            .copyright {
+              margin-top: 1rem;
+            }
+          }
         }
 
         h4 {
