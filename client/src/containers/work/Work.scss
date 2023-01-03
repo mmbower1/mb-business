@@ -8,6 +8,13 @@
   padding: 4rem;
 
   @media (max-width: 500px) {
+    background: linear-gradient(
+        to left top,
+        rgba(0, 0, 0, 0.75),
+        $primary-color
+      ),
+      url("../../img/3.jpg");
+
     .lg-heading {
       font-size: 40px;
     }
