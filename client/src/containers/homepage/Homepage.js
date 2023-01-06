@@ -23,6 +23,7 @@ const Homepage = () => {
         <h2 className="sm-heading">
           Web design, collaborations, courses & personal tutoring needs.
         </h2>
+
         <div className="icons">
           <Link to="">
             <i className="fab fa-brands fa-envira fa-4x"></i>

@@ -11,29 +11,6 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3 {
-  &.lg-heading {
-    font-size: 6rem;
-    margin-bottom: 1rem;
-
-    @media screen and (max-width: 788px) {
-      font-size: 3rem;
-    }
-  }
-
-  &.sm-heading {
-    background: rgba(lighten($primary-color, 2), 0.5);
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-
-    @media screen and (max-width: 788px) {
-      font-size: 1.1rem;
-    }
-  }
-}
-
 #homepage {
   min-height: 100%;
   background: linear-gradient(to left top, rgba(0, 0, 0, 0.75), $primary-color),
@@ -43,6 +20,33 @@ h3 {
 
   @media (max-width: 500px) {
     padding: 2rem;
+  }
+
+  .overlay {
+    margin-bottom: 5rem;
+
+    h1,
+    h2,
+    h3 {
+      &.lg-heading {
+        font-size: 6rem;
+        margin-bottom: 3rem;
+
+        @media screen and (max-width: 788px) {
+          font-size: 3rem;
+        }
+      }
+
+      &.sm-heading {
+        background: rgba(lighten($primary-color, 2), 0.5);
+        margin-bottom: 3rem;
+        padding: 0.2rem 1rem;
+
+        @media screen and (max-width: 788px) {
+          font-size: 1.1rem;
+        }
+      }
+    }
   }
 
   .icons {
@@ -80,7 +84,7 @@ h3 {
     font-size: 30px;
     padding: 40px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: center;
     width: 100%;
 
