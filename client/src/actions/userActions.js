@@ -129,7 +129,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.get(
-      `/login/${id}`,
+      `/profile/${id}`,
       //   "https://api.mbdesign.com/login/:id",
       config
     );
@@ -172,7 +172,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
 
     // const { data } = await axios.put(`/api/users/profile`, user, config)
     const { data } = await axios.put(
-      "/login",
+      "/profile",
       //   "https://api.mbdesign.com/login",
       user,
       config
