@@ -47,7 +47,7 @@ export const login = (email, password) => async (dispatch) => {
       type: USER_LOGIN_SUCCESS,
       payload: data,
     });
-    localStorage.setItem("userInfo", JSON.stringify(data));
+    // localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
     dispatch({
       type: USER_LOGIN_FAIL,
@@ -108,9 +108,9 @@ export const register = (name, email, password, password2) => async (
 };
 
 export const getUserDetails = (id) => async (dispatch, getState) => {
-  if (localStorage.token) {
-    setAuthToken(localStorage.token);
-  }
+  // if (localStorage.token) {
+  //   setAuthToken(localStorage.token);
+  // }
   try {
     dispatch({
       type: USER_DETAILS_REQUEST,
@@ -120,19 +120,21 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
       userLogin: { userInfo },
     } = getState();
 
-    console.log("userInfo, ", userInfo);
+    console.log("getState, ", getState);
 
     const config = {
       headers: {
+        "Content-Type": "application/json",
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
 
     const { data } = await axios.get(
       `/profile/${id}`,
-      //   "https://api.mbdesign.com/login/:id",
+      //   "https://api.mbdesign.com/profile/:id",
       config
     );
+    console.log("data", data);
 
     dispatch({
       type: USER_DETAILS_SUCCESS,

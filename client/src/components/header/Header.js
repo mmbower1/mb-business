@@ -28,7 +28,6 @@ const Header = ({ history, location }) => {
   const logoutHandler = (e) => {
     e.preventDefault();
     dispatch(logout());
-    console.log(logout);
   };
 
   const menuBtnEl = useRef(null);
