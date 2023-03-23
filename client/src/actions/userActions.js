@@ -108,19 +108,18 @@ export const register = (name, email, password, password2) => async (
 };
 
 export const getUserDetails = (id) => async (dispatch, getState) => {
-  // if (localStorage.token) {
-  //   setAuthToken(localStorage.token);
-  // }
+  if (localStorage.token) {
+    setAuthToken(localStorage.token);
+  }
   try {
     dispatch({
       type: USER_DETAILS_REQUEST,
     });
 
     const {
-      userLogin: { userInfo },
+      userLoginReducer: { userInfo },
     } = getState();
-
-    console.log("getState, ", getState);
+    console.log("userInfo ", userInfo);
 
     const config = {
       headers: {
@@ -128,14 +127,12 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-
     const { data } = await axios.get(
       `/profile/${id}`,
       //   "https://api.mbdesign.com/profile/:id",
       config
     );
-    console.log("data", data);
-
+    //   console.log("data", data);
     dispatch({
       type: USER_DETAILS_SUCCESS,
       payload: data,

@@ -80,9 +80,9 @@ const Header = ({ history, location }) => {
       navItems3El.current.classList.remove("show");
       navItems4El.current.classList.remove("show");
       navItems5El.current.classList.remove("show");
-
       //////// REPETITIVE. NEEDS A FOR LOOP WITH USEREF() //////////
-      setShowMenu(false);
+
+      // setShowMenu(false);
       const pathname = window.location.pathname.replace("/", "");
       setCurrentPage(pathname);
     }
