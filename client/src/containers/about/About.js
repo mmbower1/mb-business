@@ -26,46 +26,46 @@ const About = () => {
   const timestampEl = useRef(null);
 
   // function toggleVideoStatus() {
-  //   if (video.paused) {
-  //     video.play();
+  //   if (videoEl.paused) {
+  //     videoEl.play();
   //   } else {
-  //     video.pause();
+  //     videoEl.pause();
   //   }
   // }
 
-  // // update play/pause icons
+  // // // update play/pause icons
   // function updatePlayIcon() {
-  //   if (video.paused) {
-  //     play.innerHTML = '<i class="fa fa-play fa-2x"></i>';
+  //   if (videoEl.paused) {
+  //     playEl.innerHTML = '<i class="fa fa-play fa-2x"></i>';
   //   } else {
-  //     play.innerHTML = '<i class="fa fa-pause fa-2x"></i>';
+  //     playEl.innerHTML = '<i class="fa fa-pause fa-2x"></i>';
   //   }
   // }
 
-  // // update progress and timestamp
+  // // // update progress and timestamp
   // function updateProgress() {
-  //   progress.value = (video.currentTime / video.duration) * 100;
+  //   progressEl.value = (videoEl.currentTime / videoEl.duration) * 100;
   //   // get minutes
-  //   let mins = Math.floor(video.currentTime / 60);
+  //   let mins = Math.floor(videoEl.currentTime / 60);
   //   if (mins < 10) {
   //     mins = "0" + String(mins);
   //   }
   //   // get seconds
-  //   let secs = Math.floor(video.currentTime % 60);
+  //   let secs = Math.floor(videoEl.currentTime % 60);
   //   if (secs < 10) {
   //     secs = "0" + String(secs);
   //   }
-  //   timestamp.innerHTML = `${mins}:${secs}`;
+  //   timestampEl.innerHTML = `${mins}:${secs}`;
   // }
 
   // // set video time to progress
   // function setVideoProgress() {
-  //   video.currentTime = (+progress.value * video.duration) / 100;
+  //   videoEl.currentTime = (+progressEl.value * videoEl.duration) / 100;
   // }
 
   // function stopVideo() {
-  //   video.currentTime = 0;
-  //   video.pause();
+  //   videoEl.currentTime = 0;
+  //   videoEl.pause();
   // }
 
   return (
@@ -115,9 +115,15 @@ const About = () => {
               src={sortListMP4}
               poster={playButton}
               useRef={videoEl}
+              // onClick={toggleVideoStatus}
             ></video>
             <div class="controls">
-              <button class="btn" id="play" useRef={playEl}>
+              <button
+                class="btn"
+                id="play"
+                useRef={playEl}
+                // onClick={updatePlayIcon}
+              >
                 <i class="fa fa-play fa-2x"></i>
               </button>
               <button class="btn" id="stop" useRef={stopEl}>
@@ -132,6 +138,7 @@ const About = () => {
                 step="0.1"
                 value="0"
                 useRef={progressEl}
+                // onClick={updateProgress}
               />
               <span class="timestamp" id="timestamp" useRef={timestampEl}>
                 00:00
@@ -145,9 +152,15 @@ const About = () => {
               src={mernStructureMP4}
               poster={playButton}
               useRef={videoEl}
+              // onClick={toggleVideoStatus}
             ></video>
             <div class="controls">
-              <button class="btn" id="play" useRef={playEl}>
+              <button
+                class="btn"
+                id="play"
+                useRef={playEl}
+                // onClick={updatePlayIcon}
+              >
                 <i class="fa fa-play fa-2x"></i>
               </button>
               <button class="btn" id="stop" useRef={stopEl}>
@@ -162,6 +175,7 @@ const About = () => {
                 step="0.1"
                 value="0"
                 useRef={progressEl}
+                // onClick={updateProgress}
               />
               <span class="timestamp" id="timestamp" useRef={timestampEl}>
                 00:00

@@ -5,6 +5,8 @@ import "./Work.scss";
 import ecotreecarePhoto from "../../img/ecotreecare.png";
 import cryptoConverter from "../../img/cryptoConverter.png";
 import monarchTrackerPhoto from "../../img/monarchtracker.png";
+import asteroids from "../../img/asteroids.png";
+import snakeGame from "../../img/snakeGame.png";
 
 const Work = () => {
   return (
@@ -49,9 +51,9 @@ const Work = () => {
             <Link to="https://mmbower1.github.io/monarch_crypto_converter/">
               <img src={cryptoConverter} alt="project3" />
             </Link>
-            <Link to="" className="btn-light">
+            <div to="" className="btn-light">
               <i className="fas fa-eye"></i> Crypto Converter
-            </Link>
+            </div>
             <Link
               to="https://github.com/mmbower1/monarchConnector"
               className="btn-dark"
@@ -60,24 +62,30 @@ const Work = () => {
             </Link>
           </div>
           <div className="item">
-            <Link to="#!">
-              <img src="" alt="TBD" />
+            <Link to="https://mmbower1.github.io/asteroids/">
+              <img src={asteroids} alt="project4" />
             </Link>
             <Link to="" className="btn-light">
-              <i className="fas fa-eye"></i> Project 4
+              <i className="fas fa-eye"></i> Asteroids
             </Link>
-            <Link to="" className="btn-dark">
+            <Link
+              to="https://github.com/mmbower1/asteroids"
+              className="btn-dark"
+            >
               <i className="fab fa-github"></i> Github
             </Link>
           </div>
           <div className="item">
-            <Link to="#!">
-              <img src="" alt="TBD" />
+            <Link to="https://mmbower1.github.io/snakeGame/">
+              <img src={snakeGame} alt="project5" />
             </Link>
             <Link to="" className="btn-light">
-              <i className="fas fa-eye"></i> Project 5
+              <i className="fas fa-eye"></i> Snake Game
             </Link>
-            <Link to="" className="btn-dark">
+            <Link
+              to="https://github.com/mmbower1/snakeGame"
+              className="btn-dark"
+            >
               <i className="fab fa-github"></i> Github
             </Link>
           </div>
